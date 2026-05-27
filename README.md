@@ -1,73 +1,79 @@
-# React + TypeScript + Vite
+# Fintech Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é o frontend da aplicação **Fintech**, uma plataforma completa de gestão de finanças pessoais. O projeto foi desenvolvido com **React**, **TypeScript** e **Vite**, utilizando **React Bootstrap** para a interface do usuário.
 
-Currently, two official plugins are available:
+## 🚀 Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+A aplicação permite a gestão integral da vida financeira do usuário, organizada nos seguintes módulos:
 
-## React Compiler
+- **Autenticação**: Sistema de login e registro seguro com persistência de token.
+- **Dashboard (Home)**: Visão geral dos saldos e movimentações recentes.
+- **Contas**: Gerenciamento de múltiplas contas bancárias e saldos.
+- **Categorias**: Organização de fluxos de caixa (Receitas e Despesas).
+- **Transações**: Histórico detalhado de movimentações com filtros.
+- **Investimentos**: Gestão de ativos (CDB, Ações, Criptomoedas, etc.).
+- **Metas (Goals)**: Planejamento financeiro com acompanhamento de progresso e depósitos integrados.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+- **React 19**
+- **TypeScript**
+- **Vite**
+- **React Router 7**
+- **React Bootstrap** (Styling)
+- **Bootstrap Icons**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🏁 Como Iniciar o Projeto
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Siga os passos abaixo para rodar o projeto em sua máquina local:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 1. Pré-requisitos
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Instalar o **Node.js** (versão LTS recomendada) em seu sistema.
+
+### 2. Instalação das Dependências
+
+Clone o repositório e, dentro da pasta do projeto, execute:
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 3. Configuração de Variáveis de Ambiente
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Crie um arquivo `.env` na raiz do projeto (ou edite o existente) e configure a URL da API:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```env
+VITE_API_URL=http://localhost:8080/api
 ```
+
+### 4. Executando o Servidor de Desenvolvimento
+
+Para iniciar a aplicação em modo de desenvolvimento com Hot Module Replacement (HMR):
+
+```bash
+npm run dev
+```
+
+O projeto estará disponível por padrão em `http://localhost:5173`.
+
+### 5. Build para Produção
+
+Para gerar a versão otimizada do projeto para deploy:
+
+```bash
+npm run build
+```
+
+Os arquivos finais serão gerados na pasta `dist/`.
+
+## 📁 Estrutura do Projeto
+
+- `src/components`: Componentes reutilizáveis da interface (Header, ProtectedRoute, etc.).
+- `src/pages`: Páginas da aplicação (Home, Login, Accounts, etc.).
+- `src/assets`: Recursos estáticos como imagens e ícones.
+- `api/`: Documentação e coleções de referência da API.
+
+---
+
+Desenvolvido como parte do projeto de conclusão de fase para a disciplina de Desenvolvimento Frontend.
