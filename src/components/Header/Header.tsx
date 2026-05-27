@@ -26,7 +26,7 @@ const Header = () => {
                     <div className='d-flex align-items-center'>
                         <Wallet2 size={36} className='bg-dark text-white p-2 rounded-2 me-2' />
                         <h3 className="mb-0">
-                            GianniXP
+                            SyncXP
                         </h3>
                     </div>
                     <Button
@@ -42,7 +42,7 @@ const Header = () => {
                 <OffcanvasHeader closeButton={true} className="border-bottom py-4">
                     <div className='d-flex align-items-center'>
                         <Wallet2 size={32} className='bg-dark text-white p-2 rounded-2 me-2' />
-                        <h5 className="mb-0 fw-bold">Menu GianniXP</h5>
+                        <h5 className="mb-0 fw-bold">Menu SyncXP</h5>
                     </div>
                 </OffcanvasHeader>
                 <Offcanvas.Body className="p-0">

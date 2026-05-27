@@ -79,7 +79,7 @@ const Register = () => {
               <Form.Label>Email</Form.Label>
               <Form.Control
                 type="email"
-                placeholder="Ex: gianni@exemplo.com"
+                placeholder="Ex: sync@exemplo.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required

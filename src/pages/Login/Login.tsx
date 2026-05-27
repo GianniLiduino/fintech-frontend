@@ -57,7 +57,7 @@ const Login = () => {
           <div className="text-center mb-4 d-flex flex-column align-items-center">
             <Wallet2 size={48} className="bg-dark text-white p-2 rounded-2 mb-3" />
             <h2 className="fw-bold">Login</h2>
-            <p className="text-muted">Acesse sua conta GianniXP</p>
+            <p className="text-muted">Acesse sua conta SyncXP</p>
           </div>
 
           {successMessage && <Alert variant="success">{successMessage}</Alert>}
@@ -68,7 +68,7 @@ const Login = () => {
               <Form.Label>Email</Form.Label>
               <Form.Control
                 type="email"
-                placeholder="Ex: gianni@exemplo.com"
+                placeholder="Ex: sync@exemplo.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
