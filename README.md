@@ -72,7 +72,6 @@ Os arquivos finais serão gerados na pasta `dist/`.
 - `src/components`: Componentes reutilizáveis da interface (Header, ProtectedRoute, etc.).
 - `src/pages`: Páginas da aplicação (Home, Login, Accounts, etc.).
 - `src/assets`: Recursos estáticos como imagens e ícones.
-- `api/`: Documentação e coleções de referência da API.
 
 ---
 
